@@ -15,7 +15,7 @@ module LedgerSync
           module ClassMethods
             def references_one(name, to: nil)
               to ||= begin
-                require "ledger_sync/ledgers/#{inferred_client_class.root_key}/resources/#{name}"
+                require "ledger_sync-core/ledgers/#{inferred_client_class.root_key}/resources/#{name}"
                 inferred_client_class.resources[name]
               end
 

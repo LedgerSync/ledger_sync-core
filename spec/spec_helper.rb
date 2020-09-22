@@ -13,7 +13,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
 )
 
 SimpleCov.start do
-  add_filter 'lib/ledger_sync/util/debug.rb'
+  add_filter 'lib/ledger_sync-core/util/debug.rb'
 end
 
 # Set an environment variable to determine when we are testing.  This
@@ -24,7 +24,7 @@ ENV['TEST_ENV'] = 'true'
 require 'bundler/setup'
 require 'ap'
 require 'byebug'
-require 'ledger_sync'
+require 'ledger_sync-core'
 
 require File.join(LedgerSync.root, 'spec/test_ledger/config')
 

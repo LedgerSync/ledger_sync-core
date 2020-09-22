@@ -26,7 +26,7 @@ module LedgerSync
       @root_key = root_key
       @aliases = []
       @module_string = args.fetch(:module_string, LedgerSync::Util::StringHelpers.camelcase(root_key))
-      @root_path = args.fetch(:root_path, "ledger_sync/ledgers/#{root_key}")
+      @root_path = args.fetch(:root_path, "ledger_sync-core/ledgers/#{root_key}")
     end
 
     def client_class

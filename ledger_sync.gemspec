@@ -2,10 +2,10 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ledger_sync/version'
+require 'ledger_sync-core/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'ledger_sync'
+  spec.name = 'ledger_sync-core'
   spec.version = LedgerSync::VERSION
 
   # spec.required_rubygems_version = Gem::Requirement.new('>= 0') if spec.respond_to? :required_rubygems_version=
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.description = 'LedgerSync is a simple library that allows you to sync common objects to popular accounting '\
                      'software like QuickBooks Online, Xero, NetSuite, etc.'
   spec.email = ['ryanwjackson@gmail.com']
-  spec.homepage = 'https://github.com/LedgerSync/ledger_sync'
+  spec.homepage = 'https://github.com/LedgerSync/ledger_sync-core'
   spec.licenses = ['MIT']
   spec.rubygems_version = '3.0.3'
   spec.summary = 'Sync common objects to accounting software.'

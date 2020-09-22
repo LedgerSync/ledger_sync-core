@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'ledger_sync/type/value'
+require 'ledger_sync-core/type/value'
 
-Gem.find_files('ledger_sync/type/**/*.rb').each do |path|
+Gem.find_files('ledger_sync-core/type/**/*.rb').each do |path|
   require path
 end
 
-Gem.find_files('ledger_sync/resource_attribute/**/*.rb').each do |path|
+Gem.find_files('ledger_sync-core/resource_attribute/**/*.rb').each do |path|
   require path
 end
 

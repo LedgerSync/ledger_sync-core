@@ -38,7 +38,7 @@ module LedgerSync
     end
 
     def operation_paths
-      @operation_paths ||= Gem.find_files('ledger_sync/ledgers/**/operations/*.rb')
+      @operation_paths ||= Gem.find_files('ledger_sync-core/ledgers/**/operations/*.rb')
     end
 
     def resource_attributes_for(resource_class:)

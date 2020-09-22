@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Gem.find_files('ledger_sync/ledgers/test_ledger/serializer_type/**/*.rb').each { |path| require path }
+# Gem.find_files('ledger_sync-core/ledgers/test_ledger/serializer_type/**/*.rb').each { |path| require path }
 
 module LedgerSync
   module Ledgers

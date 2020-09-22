@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-require 'ledger_sync/util/resource_converter'
+require 'ledger_sync-core/util/resource_converter'
 
 RSpec.describe LedgerSync::Util::ResourceConverter do
   let(:converter_class) do

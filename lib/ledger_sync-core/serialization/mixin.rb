@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Gem.find_files('ledger_sync/type/**/*.rb').each { |path| require path }
+Gem.find_files('ledger_sync-core/type/**/*.rb').each { |path| require path }
 require_relative 'attribute'
 require_relative 'attribute_set_mixin'
 require_relative '../ledgers/mixins/infer_serializer_mixin'

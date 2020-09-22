@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Gem.find_files('ledger_sync/serialization/type/**/*.rb').each { |path| require path }
+Gem.find_files('ledger_sync-core/serialization/type/**/*.rb').each { |path| require path }
 
 module LedgerSync
   module Serialization

@@ -20,53 +20,53 @@ require 'dotenv'
 Dotenv.load
 
 # Version
-require 'ledger_sync/version'
+require 'ledger_sync-core/version'
 
 # Concerns
-require 'ledger_sync/concerns/validatable'
+require 'ledger_sync-core/concerns/validatable'
 
 # Extensions
-require 'ledger_sync/core_ext/resonad'
+require 'ledger_sync-core/core_ext/resonad'
 
 # Errors
-require 'ledger_sync/error'
-Gem.find_files('ledger_sync/error/**/*.rb').each { |path| require path }
+require 'ledger_sync-core/error'
+Gem.find_files('ledger_sync-core/error/**/*.rb').each { |path| require path }
 
 # Support Classes
-require 'ledger_sync/util/resonad'
-require 'ledger_sync/util/url_helpers'
-require 'ledger_sync/util/signer'
-require 'ledger_sync/util/hash_helpers'
-require 'ledger_sync/util/read_only_object'
-require 'ledger_sync/util/resources_builder'
-require 'ledger_sync/ledger_configuration'
-require 'ledger_sync/ledger_configuration_store'
-require 'ledger_sync/util/performer'
-require 'ledger_sync/util/validator'
-require 'ledger_sync/util/string_helpers'
-require 'ledger_sync/util/mixins/delegate_iterable_methods_mixin'
-require 'ledger_sync/util/mixins/resource_registerable_mixin'
-require 'ledger_sync/util/mixins/dupable_mixin'
-require 'ledger_sync/result'
-require 'ledger_sync/operation'
+require 'ledger_sync-core/util/resonad'
+require 'ledger_sync-core/util/url_helpers'
+require 'ledger_sync-core/util/signer'
+require 'ledger_sync-core/util/hash_helpers'
+require 'ledger_sync-core/util/read_only_object'
+require 'ledger_sync-core/util/resources_builder'
+require 'ledger_sync-core/ledger_configuration'
+require 'ledger_sync-core/ledger_configuration_store'
+require 'ledger_sync-core/util/performer'
+require 'ledger_sync-core/util/validator'
+require 'ledger_sync-core/util/string_helpers'
+require 'ledger_sync-core/util/mixins/delegate_iterable_methods_mixin'
+require 'ledger_sync-core/util/mixins/resource_registerable_mixin'
+require 'ledger_sync-core/util/mixins/dupable_mixin'
+require 'ledger_sync-core/result'
+require 'ledger_sync-core/operation'
 
-Gem.find_files('ledger_sync/type/**/*.rb').each { |path| require path }
-Gem.find_files('ledger_sync/serialization/type/**/*.rb').each { |path| require path }
-require 'ledger_sync/serializer'
-require 'ledger_sync/deserializer'
+Gem.find_files('ledger_sync-core/type/**/*.rb').each { |path| require path }
+Gem.find_files('ledger_sync-core/serialization/type/**/*.rb').each { |path| require path }
+require 'ledger_sync-core/serializer'
+require 'ledger_sync-core/deserializer'
 
 # Ledgers
-Gem.find_files('ledger_sync/ledgers/mixins/**/*.rb').each { |path| require path }
-require 'ledger_sync/ledgers/client'
-require 'ledger_sync/ledgers/dashboard_url_helper'
-require 'ledger_sync/ledgers/searcher'
-require 'ledger_sync/ledgers/operation'
-require 'ledger_sync/ledgers/contract'
-require 'ledger_sync/ledgers/response'
-require 'ledger_sync/ledgers/request'
+Gem.find_files('ledger_sync-core/ledgers/mixins/**/*.rb').each { |path| require path }
+require 'ledger_sync-core/ledgers/client'
+require 'ledger_sync-core/ledgers/dashboard_url_helper'
+require 'ledger_sync-core/ledgers/searcher'
+require 'ledger_sync-core/ledgers/operation'
+require 'ledger_sync-core/ledgers/contract'
+require 'ledger_sync-core/ledgers/response'
+require 'ledger_sync-core/ledgers/request'
 
 # Resources (resources are registered below)
-require 'ledger_sync/resource' # Template class
+require 'ledger_sync-core/resource' # Template class
 
 module LedgerSync
   include Util::Mixins::ResourceRegisterableMixin
@@ -131,4 +131,4 @@ module LedgerSync
 end
 
 # Load Ledgers
-Gem.find_files('ledger_sync/ledgers/**/config.rb').each { |path| require path }
+Gem.find_files('ledger_sync-core/ledgers/**/config.rb').each { |path| require path }

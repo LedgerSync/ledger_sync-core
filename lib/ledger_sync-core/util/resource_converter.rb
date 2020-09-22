@@ -2,7 +2,7 @@
 
 require_relative 'resource_converter/attribute_set'
 require_relative 'resource_converter/attribute'
-Gem.find_files('ledger_sync/util/resource_converter/type/**/*.rb').each { |path| require path }
+Gem.find_files('ledger_sync-core/util/resource_converter/type/**/*.rb').each { |path| require path }
 
 module LedgerSync
   module Util
