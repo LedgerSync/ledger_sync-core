@@ -10,23 +10,10 @@ VCR.configure do |config|
   config.debug_logger = File.open(File.join(LedgerSync.root, 'tmp/vcr.log'), 'w') if ENV['DEBUG']
 
   if ENV.key?('USE_DOTENV_ADAPTOR_SECRETS')
-    test_ledger_account_id_filler = 'vcr_test_ledger_account_id'
     # These need to match the defaults in support/test_ledger_helpers.rb for the
     # stubs to work.
-    if ENV.key?('TEST_LEDGER_ACCESS_TOKEN')
-      config.filter_sensitive_data('VCR_TEST_LEDGER_ACCESS_TOKEN') { ENV['TEST_LEDGER_ACCESS_TOKEN'] }
-    end
-    if ENV.key?('TEST_LEDGER_CLIENT_ID')
-      config.filter_sensitive_data('VCR_TEST_LEDGER_CLIENT_ID') { ENV['TEST_LEDGER_CLIENT_ID'] }
-    end
-    if ENV.key?('TEST_LEDGER_CLIENT_SECRET')
-      config.filter_sensitive_data('VCR_TEST_LEDGER_CLIENT_SECRET') { ENV['TEST_LEDGER_CLIENT_SECRET'] }
-    end
-    if ENV.key?('TEST_LEDGER_REALM_ID')
-      config.filter_sensitive_data('VCR_TEST_LEDGER_REALM_ID') { ENV['TEST_LEDGER_REALM_ID'] }
-    end
-    if ENV.key?('TEST_LEDGER_REFRESH_TOKEN')
-      config.filter_sensitive_data('VCR_TEST_LEDGER_REFRESH_TOKEN') { ENV['TEST_LEDGER_REFRESH_TOKEN'] }
+    if ENV.key?('TEST_LEDGER_API_KEY')
+      config.filter_sensitive_data('VCR_TEST_LEDGER_API_KEY') { ENV['TEST_LEDGER_API_KEY'] }
     end
   end
 end

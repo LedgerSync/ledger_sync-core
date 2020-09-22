@@ -23,3 +23,33 @@ Metrics/ParameterLists:
 
 Style/Documentation:
   Enabled: False
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: False
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: False
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: False
+
+Lint/MixedRegexpCaptureTypes:
+  Enabled: False
+
+Lint/RaiseException:
+  Enabled: False
+
+Lint/StructNewOverride:
+  Enabled: False
+
+Style/ExponentialNotation:
+  Enabled: False
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: False
+
+Style/RedundantRegexpEscape:
+  Enabled: False
+
+Style/SlicingWithRange:
+  Enabled: False

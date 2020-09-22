@@ -35,14 +35,15 @@ RSpec.describe LedgerSync::Ledgers::Request do
 
   describe '#perform' do
     it do
-      stub_request(:get, "http://www.example.com/").
-         with(
-           headers: {
-       	  'Accept'=>'*/*',
-       	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-       	  'User-Agent'=>'Ruby'
-           }).
-         to_return(status: 200, body: "", headers: {})
+      stub_request(:get, 'http://www.example.com/')
+        .with(
+          headers: {
+            'Accept' => '*/*',
+            'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+            'User-Agent' => 'Ruby'
+          }
+        )
+        .to_return(status: 200, body: '', headers: {})
 
       subject.perform
       expect { subject.perform }.to raise_error(StandardError, 'Request already performed')

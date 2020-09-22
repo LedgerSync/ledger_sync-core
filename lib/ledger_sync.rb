@@ -110,7 +110,7 @@ module LedgerSync
 
     yield(ledger_config)
 
-    self.ledgers.register_ledger(ledger_config: ledger_config)
+    ledgers.register_ledger(ledger_config: ledger_config)
 
     client_files = Gem.find_files("#{ledger_config.root_path}/resource.rb")
     client_files |= Gem.find_files("#{ledger_config.root_path}/resources/**/*.rb")

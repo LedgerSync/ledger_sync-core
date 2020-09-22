@@ -14,7 +14,11 @@ RSpec.describe LedgerSync::Serialization::Type::DeserializerType do
 
   describe '#cast_value' do
     subject do
-      type.cast_value(deserializer_attribute: deserializer_attribute, resource: test_ledger_module::Customer.new, value: value)
+      type.cast_value(
+        deserializer_attribute: deserializer_attribute,
+        resource: test_ledger_module::Customer.new,
+        value: value
+      )
     end
 
     it { expect(subject).to be_a(test_ledger_module::Subsidiary) }
