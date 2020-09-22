@@ -6,7 +6,7 @@ require 'ledger_sync-core/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'ledger_sync-core'
-  spec.version = LedgerSync::VERSION
+  spec.version = LedgerSyncCore::VERSION
 
   # spec.required_rubygems_version = Gem::Requirement.new('>= 0') if spec.respond_to? :required_rubygems_version=
   spec.authors = ['Ryan Jackson']
