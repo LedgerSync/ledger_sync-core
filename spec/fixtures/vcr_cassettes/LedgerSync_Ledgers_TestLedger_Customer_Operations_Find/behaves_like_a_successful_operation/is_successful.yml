@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox-quickbooks.api.intuit.com/v3/company/realm_id/customer/1837
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer access_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Mon, 21 Sep 2020 12:41:28 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '420'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Intuit-Tid:
+      - 1-5f689f78-ad8e27f0984531b0701d16d0
+      Www-Authenticate:
+      - Bearer realm="Intuit", error="invalid_token"
+    body:
+      encoding: UTF-8
+      string: '{"warnings":null,"intuitObject":null,"fault":{"error":[{"message":"message=AuthenticationFailed;
+        errorCode=003200; statusCode=401","detail":"Malformed bearer token: too short
+        or too long","code":"3200","element":null}],"type":"AUTHENTICATION"},"report":null,"queryResponse":null,"batchItemResponse":[],"attachableResponse":[],"syncErrorResponse":null,"requestId":null,"time":1600692088341,"status":null,"cdcresponse":[]}'
+  recorded_at: Mon, 21 Sep 2020 12:41:28 GMT
+- request:
+    method: post
+    uri: https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer
+    body:
+      encoding: UTF-8
+      string: client_id=client_id&client_secret=client_secret&grant_type=refresh_token&refresh_token=refresh_token
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Mon, 21 Sep 2020 12:41:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '26'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=15552000
+      Intuit-Tid:
+      - 1-5f689f78-c330b526642828823e6e3c1c
+      X-Spanid:
+      - 4c1f8c78-006a-4d94-9543-ca29a227fc44
+      - f5ac3f2d-0e44-43c9-a805-9158e9f28273:1
+      X-Amzn-Trace-Id:
+      - Root=1-5f689f78-c330b526642828823e6e3c1c
+      - Self=1-5f689f78-f34dce1a30593014707600f2;Root=1-5f689f78-c330b526642828823e6e3c1c
+      Www-Authenticate:
+      - Basic realm="Intuit"
+      Cache-Control:
+      - no-cache, no-store
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"error":"invalid_client"}'
+  recorded_at: Mon, 21 Sep 2020 12:41:29 GMT
+recorded_with: VCR 6.0.0
